@@ -25,7 +25,7 @@ This Salesforce DX project aims to automate the lead conversion process for Acme
 
 2. **Navigate to the Project Directory**:  
    ```
-   cd MyLeadConversionProject
+   cd SFDX-Lead-Conversion-Solution
    ```
 
 3. **Authenticate with your Dev Org**:  
