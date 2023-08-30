@@ -35,7 +35,7 @@ This Salesforce DX project aims to automate the lead conversion process for Acme
 
 4. **Deploy to Dev Org**:  
    ```
-   sfdx force:source:deploy -p force-app
+   sfdx force:source:deploy -p force-app -u MyDevOrg
    ```
 
 ## Custom Objects and Fields
