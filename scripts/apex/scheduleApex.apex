@@ -1,0 +1,1 @@
+System.schedule('AutoConvertLeadsJob', '0 0 * * * ?', new AutoConvertLeadScheduler());

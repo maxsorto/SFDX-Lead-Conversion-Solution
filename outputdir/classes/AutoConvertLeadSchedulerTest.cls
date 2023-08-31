@@ -1,6 +1,6 @@
 @isTest
-public class AutoConvertLeadHandlerTest {
-    @isTest static void testAutoConvertLead() {
+public class AutoConvertLeadSchedulerTest {
+    @isTest static void testAutoConvertLeadScheduler() {
         // Prepare test data: Create an account and property for matching
         Account testAccount = new Account(Name='Test Account', FlagCompanyId__c='12345');
         insert testAccount;
@@ -19,9 +19,10 @@ public class AutoConvertLeadHandlerTest {
         // Start the test context
         Test.startTest();
 
-        // Instantiate the handler and call the method to convert leads
-        AutoConvertLeadHandler handler = new AutoConvertLeadHandler();
-        handler.autoConvertLeads(new List<Lead>{testLead});
+        // Schedule the job
+        String cron = '0 0 * * * ?';
+        AutoConvertLeadScheduler scheduler = new AutoConvertLeadScheduler();
+        System.schedule('Test_Scheduler', cron, scheduler);
 
         // Stop the test context
         Test.stopTest();
